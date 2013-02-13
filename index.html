@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+
+        <style>
+            body { font-family: sans-serif; text-align: center}
+        </style>
+
+        <title>jquery.base64.js | Base64 en &amp; -decoding</title>
+    </head>
+
+    <body>
+        <h1>Base64</h1>
+
+        <div>
+            <label for="encode">Encode: </label>
+            <input id="encode" type="text" value="we ♥ yckart" placeholder="encode">
+        </div>
+        <div>
+            <label for="decode">Decode: </label>
+            <input id="decode" type="text" value="d2Ug4pmlIHlja2FydA==" placeholder="decode">
+        </div>
+
+        <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+        <script src='jquery.base64.js'></script>
+        <script>
+            var dec = $('#decode'),
+                enc = $('#encode');
+
+            enc.keyup(function () {
+                dec.val( $.base64('encode', this.value) );
+                // also possible:
+                // dec.val( enc.base64('encode', this.value) );
+                // dec.val( enc.base64().encode(this.value) );
+            });
+
+
+            dec.keyup(function () {
+                enc.val( $.base64().decode(this.value) );
+            });
+        </script>
+    </body>
+</html>
