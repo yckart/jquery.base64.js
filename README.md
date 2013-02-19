@@ -6,8 +6,30 @@ You can check for `btoa` and `atob` support and refer to `jQuery.base64`
     if (!window.btoa) window.btoa = $.base64.btoa
     if (!window.atob) window.atob = $.base64.atob
 
+## Options
+You can define some options per default, set them globally use the following syntax:
+
+`$.base64.utf8encode = true;`
+
+Utf8 encoding and decoding as global option, possibilities:
+
+| option | description | default |
+|:--|:--|:--|
+| `raw` |  If `false` it encodes/decodes both, the input and output. | `true` |
+| `utf8encode` |  To encode only the input you can set encodung to `true`. | `false` |
+| `utf8decode` | Same as above but for the output and decoding. | `false` |
+
+You can override the global options by passing an extra parameter:
+
+`$.base64[property](<value>, options);` / `$.base64(<property>, <value>, options);`
+
+To enable `UTF8-encoding` pass true as the last paramter:
+
+    $.base64.atob(<value>, true);
+    $.base64('atob', <value>, true);
+
 ## Download
- Get the [raw](https://raw.github.com/yckart/jquery.base64.js/master/jquery.base64.js) script, download the complete [package](https://github.com/yckart/jquery.base64.js/zipball/master) or fork it on [GitHub](https://github.com/yckart/jquery.base64.js/).
+Get the [raw](https://raw.github.com/yckart/jquery.base64.js/master/jquery.base64.js) script, download the complete [package](https://github.com/yckart/jquery.base64.js/zipball/master) or fork it on [GitHub](https://github.com/yckart/jquery.base64.js/).
 
 ## Support
 
