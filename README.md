@@ -1,10 +1,10 @@
 #No documentation yet!
 (feel free to write a bit about it)
 
-You can check for `btoa` and `atob` support and refer to `$.base64`
+You can check for `btoa` and `atob` support and refer to `jQuery.base64`
 
-    if (!window.btoa) window.btoa = $.base64().encode
-    if (!window.atob) window.atob = $.base64().decode
+    if (!window.btoa) window.btoa = $.base64.btoa
+    if (!window.atob) window.atob = $.base64.atob
 
 ## Download
  Get the [raw](https://raw.github.com/yckart/jquery.base64.js/master/jquery.base64.js) script, download the complete [package](https://github.com/yckart/jquery.base64.js/zipball/master) or fork it on [GitHub](https://github.com/yckart/jquery.base64.js/).
