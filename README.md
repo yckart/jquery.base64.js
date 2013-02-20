@@ -1,4 +1,4 @@
-#No documentation yet!
+# jQuery.base64.js
 (feel free to write a bit about it)
 
 You can check for `btoa` and `atob` support and refer to `jQuery.base64`
