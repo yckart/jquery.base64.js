@@ -111,6 +111,7 @@
     };
 
     Plugin.atob = Plugin.decode = function(coded, utf8decode) {
+        coded = coded.replace(/[^A-Za-z0-9\+\/\=]/g, "");
         coded = String(coded).split('=');
         var i = coded.length;
         do {--i;
